@@ -7,7 +7,7 @@ const Buttons = (props) => {
       onSubmit={(e) => {
         submitHandler(e);
       }}
-      className="w-full py-4 text-sm tracking-wider uppercase rounded-md hover:bg-opacity-80 drop-shadow-lg bg-green font-pop-semibold"
+      className="w-full py-4 text-xs2 tracking-wider uppercase rounded-md hover:bg-opacity-80 drop-shadow-lg bg-green font-pop-semibold"
     >
       Claim your free trial
     </button>

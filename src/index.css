@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
   @font-face {
     font-family: 'Poppins Regular';
     src: url('./assets/fonts/Poppins-Regular.ttf');
@@ -26,6 +31,14 @@
 
 @layer components {
   .introInput {
-    @apply w-full p-5 mb-5 border rounded-md outline-none border-opacity-40 font-pop-medium text-dark-blue border-grayish-blue;
+    @apply w-full px-5 py-3 placeholder:opacity-70 placeholder:text-dark-blue placeholder:font-pop-semibold border rounded-md outline-none text-xxs border-opacity-40 font-pop-semibold text-dark-blue border-grayish-blue;
   }
+
+  .error {
+    @apply text-red italic text-xs font-pop-medium inline-block right-full;
+  }
+}
+
+#root {
+  height: 100vh;
 }

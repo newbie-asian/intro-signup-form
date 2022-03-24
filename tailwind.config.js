@@ -19,6 +19,8 @@ module.exports = {
 
     fontSize: {
       xs: ['11px', { lineHeight: '21px' }],
+      xxs: ['14px', { lineHeight: '26px', letterSpacing: '.27px' }],
+      xs2: ['15px', { lineHeight: '26px', letterSpacing: '.27px' }],
       sm: ['16px', { lineHeight: '26px' }],
       m: ['18px', { lineHeight: '26px' }],
       l: ['28px', { lineHeight: '36px', letterSpacing: '-.29px' }],
@@ -27,7 +29,7 @@ module.exports = {
 
     backgroundImage: {
       mobileBg: "url('./assets/images/bg-intro-mobile.png')",
-      desktopBg: "url('./assets/images/bg-intro-mobile.png')",
+      desktopBg: "url('./assets/images/bg-intro-desktop.png')",
     },
     extend: {},
   },
