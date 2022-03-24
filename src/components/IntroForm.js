@@ -73,7 +73,7 @@ const IntroForm = () => {
 
       <div className="p-6 mt-8 bg-white rounded-md text-right">
         <form className="width-100%" onSubmit={onSubmitHandler}>
-          <div className="mb-5">
+          <div className="mb-5 relative ">
             <input
               type="text"
               className="introInput"
@@ -82,10 +82,13 @@ const IntroForm = () => {
                 setFirstName(e.target.value);
               }}
             />
+            <i className={`absolute right-6 top-[.9rem] ${isError.fName ? 'inline-block' : 'hidden'}`}>
+              <img src={error} alt="" />
+            </i>
             <span className={`error ${isError.fName ? 'inline-block' : 'hidden'}`}>First Name cannot be empty</span>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-5 relative">
             <input
               type="text"
               className="introInput"
@@ -94,16 +97,25 @@ const IntroForm = () => {
                 setLastName(e.target.value);
               }}
             />
+            <i className={`absolute right-6 top-[.9rem] ${isError.lName ? 'inline-block' : 'hidden'}`}>
+              <img src={error} alt="" />
+            </i>
             <span className={`error ${isError.lName ? 'inline-block' : 'hidden'}`}>Last Name cannot be empty</span>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-5 relative">
             <input type="email" className="introInput" placeholder="Email Address" onInput={(e) => setEmail(e.target.value)} />
+            <i className={`absolute right-6 top-[.9rem] ${isError.email ? 'inline-block' : 'hidden'}`}>
+              <img src={error} alt="" />
+            </i>
             <span className={`error ${isError.email ? 'inline-block' : 'hidden'}`}>Looks like this is not an email</span>
           </div>
 
-          <div className="mb-5">
+          <div className="mb-5 relative">
             <input type="password" className="introInput" placeholder="Password" onInput={(e) => setPassword(e.target.value)} />
+            <i className={`absolute right-6 top-[.9rem] ${isError.password ? 'inline-block' : 'hidden'}`}>
+              <img src={error} alt="" />
+            </i>
             <span className={`error ${isError.password ? 'inline-block' : 'hidden'}`}>Password cannot be empty</span>
           </div>
 
